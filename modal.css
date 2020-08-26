@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+}
+
+.popup .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.popup .content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  width: 320px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transform: translate(-50%, -50%) scale(0);
+
+}
+.popup .content .close_btn{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.popup.active .overlay{
+  display:block;
+}
+.popup.active .content{
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 300ms ease-in-out;
+}
