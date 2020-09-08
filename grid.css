@@ -1,0 +1,10 @@
+.container{
+  display: grid;
+  grid-template-columns: 70px 1fr;
+}
+.side{
+  background-color: blueviolet;
+}
+.main{
+  background-color: red;
+}
